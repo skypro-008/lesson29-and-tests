@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
+from router.serializers import StoreSerializer
+from router.models import Store
+
+
+class StoreViewSet(viewsets.ModelViewSet):
+    serializer_class = StoreSerializer
+    queryset = Store.objects.all()

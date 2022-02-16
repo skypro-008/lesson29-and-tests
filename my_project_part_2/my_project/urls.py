@@ -4,9 +4,9 @@ from django.urls import include, path
 # TODO здесь можно подключить urls Ваших приложений
 
 urlpatterns = [
-    # path("admin/", admin.site.urls),
-    # path("", include("list_view.urls")),
-    # path("", include("retrieve_view.urls")),
+    path("admin/", admin.site.urls),
+    path("", include("router.urls")),
+    path("", include("lookup_queries.urls")),
     # path("", include("slug_retrieve_view.urls")),
     # path("", include("update_view.urls")),
     # path("", include("simple_serializer.urls")),
