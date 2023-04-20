@@ -9,5 +9,5 @@ class StoreViewSet(viewsets.ModelViewSet):
     serializer_class = StoreSerializer
     queryset = Store.objects.filter(
              Q(email__icontains="ivan") |
-             Q(director__icontains="ivan")
+             Q(name__icontains="ivan")
     )
